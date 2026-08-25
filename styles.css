@@ -1,0 +1,86 @@
+.header .header-image {
+    top: 0;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRlgbFd61v6xwwOlpCMhIOQ4r3Ez5tPiSCoyonfmL3Vcg&s");
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1;
+}
+.header {
+    width: 100%;
+    height: 75%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.header h1 {
+    justify-self: center;
+}
+body {
+    margin: 0;
+    padding: 0;
+}
+.small-linkie {
+    display: block;
+    color: black;
+    svg {
+        width: 16px;
+        transform: translateY(3px);
+    }
+}
+.small-linkie:hover {
+    color: #000000aa;
+    cursor: pointer;
+}
+.nav-bar {
+    background-color: black;
+    a {
+        color: white;
+        text-decoration: none;
+        font-weight: 400;
+        padding: 16px;
+        position: relative;
+        display: inline-block;
+        
+    }:hover {
+        color: gray;  
+    }
+    a::after {
+        transition: 1s;
+        content: "";               /* Mandatory property to render element */
+        position: absolute;        /* Positions line relative to text block */
+        left: 50%;                   /* Aligns line starting from left edge */
+        bottom: 12px;              /* Distance between text baseline and underline */
+        width: 0%;               /* Spans full width of text element */
+        height: 2px;               /* Thickness of custom underline */
+        background-color: #e1ff00; /* Custom underline color */
+    }
+    a:hover::after {
+        transition: 1s;
+        content: "";               /* Mandatory property to render element */
+        position: absolute;        /* Positions line relative to text block */
+        left: 16px;                   /* Aligns line starting from left edge */
+        bottom: 12px;              /* Distance between text baseline and underline */
+        width: calc(100% - 32px);               /* Spans full width of text element */
+        height: 2px;               /* Thickness of custom underline */
+        background-color: #e1ff00; /* Custom underline color */
+    }
+}
+.content {
+    background-color: white;
+}
+.footer {
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-direction: row;
+}
+.left-footer {
+    width: 50%;
+}
+.right-footer {
+    width: 50%;
+}
