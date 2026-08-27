@@ -1,3 +1,12 @@
+:root {
+    --main-color-dark: #000000;
+    --main-color-light: #ffffff;
+    --text-color-dark: #ffffff;
+    --text-color-light: #000000;
+    --accent-color-1: #ffff00;
+    --fixed-dark: #000000;
+    --fixed-light: #ffffff;
+}
 .header .header-image {
     top: 0;
     position: fixed;
@@ -18,14 +27,16 @@
 }
 .header h1 {
     justify-self: center;
+    color: var(--fixed-light);
 }
 body {
     margin: 0;
     padding: 0;
+    font-family: arial;
 }
 .small-linkie {
     display: block;
-    color: black;
+    color: var(--fixed-dark);
     svg {
         width: 16px;
         transform: translateY(3px);
@@ -36,9 +47,9 @@ body {
     cursor: pointer;
 }
 .nav-bar {
-    background-color: black;
+    background-color: var(--fixed-dark);
     a {
-        color: white;
+        color: var(--fixed-light);
         text-decoration: none;
         font-weight: 400;
         padding: 16px;
@@ -48,7 +59,7 @@ body {
     }:hover {
         color: gray;  
     }
-    a::after {
+    a:not(.darkmode)::after {
         transition: 1s;
         content: "";               /* Mandatory property to render element */
         position: absolute;        /* Positions line relative to text block */
@@ -56,9 +67,9 @@ body {
         bottom: 12px;              /* Distance between text baseline and underline */
         width: 0%;               /* Spans full width of text element */
         height: 2px;               /* Thickness of custom underline */
-        background-color: #e1ff00; /* Custom underline color */
+        background-color: var(--accent-color-1); /* Custom underline color */
     }
-    a:hover::after {
+    a:not(.darkmode):hover::after {
         transition: 1s;
         content: "";               /* Mandatory property to render element */
         position: absolute;        /* Positions line relative to text block */
@@ -66,21 +77,33 @@ body {
         bottom: 12px;              /* Distance between text baseline and underline */
         width: calc(100% - 32px);               /* Spans full width of text element */
         height: 2px;               /* Thickness of custom underline */
-        background-color: #e1ff00; /* Custom underline color */
+        background-color: var(--accent-color-1); /* Custom underline color */
     }
 }
 .content {
-    background-color: white;
+    color: var(--text-color-light);
+    background-color: var(--main-color-light);
+}
+.text-content {
+    padding: 16px;
 }
 .footer {
-    background-color: black;
-    color: white;
+    background-color: var(--main-color-dark);
+    color: var(--text-color-dark);
     display: flex;
     flex-direction: row;
 }
 .left-footer {
-    width: 50%;
+    width: 25%;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .right-footer {
-    width: 50%;
+    padding: 10px;
+}
+.darkmode {
+    cursor: pointer;
+    float:right;
 }

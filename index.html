@@ -7,6 +7,7 @@
             <a href="">Key Club</a>
             <a href="">Form</a>
             <a href="">Another Linkie</a>
+            <a class="darkmode">dark mode</a>
         </div>
         <div class="header">
             <div class="header-image"></div>
@@ -27,16 +28,44 @@
             </div>
         </div>
         <div class="content">
-            <h2>
-                About Us
-            </h2>
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-            </p>
+            <div class="text-content">
+                <h2>
+                    About Us
+                </h2>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </p>
+                <h2>
+                    Contact Us
+                </h2>
+                <p>
+                    contact form or email here
+                </p>
+                <h2>
+                    Form Thingy m'bob
+                </h2>
+                <p>
+                    iframe embeding for form stuff here
+                </p>
+            </div>
         <div class="footer">
-            <div class="left-footer">Key Club Logo and stuff</div>
+            <div class="left-footer"><svg width="100px" height="100px" fill="gold" viewbox="0 0 10 10"><circle r="5" cx="5" cy="5"></svg></div>
             <div class="right-footer">More Linkies Yay!</div>
         </div>
         </div>
+        <script>
+            document.getElementsByClassName("darkmode")[0].addEventListener("click", () => {
+                const rootStyles = window.getComputedStyle(document.documentElement);
+                var light = rootStyles.getPropertyValue('--main-color-light').trim();
+                var dark = rootStyles.getPropertyValue('--main-color-dark').trim();
+                document.documentElement.style.setProperty('--main-color-dark', light);
+                document.documentElement.style.setProperty('--main-color-light', dark);
+                light = rootStyles.getPropertyValue('--text-color-light').trim();
+                dark = rootStyles.getPropertyValue('--text-color-dark').trim();
+                document.documentElement.style.setProperty('--text-color-dark', light);
+                document.documentElement.style.setProperty('--text-color-light', dark);
+                document.getElementsByClassName("darkmode")[0].innerHTML =  document.getElementsByClassName("darkmode")[0].innerHTML == "dark mode" ? "light mode" : "dark mode"
+            });
+        </script>
     </body>
 </html>
