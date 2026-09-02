@@ -127,6 +127,17 @@ body {
     margin: 8px;
     border-radius: 16px;
     box-shadow: 2px 2px 2px;
+    transition: 500ms;
+}
+.photos-1:hover {
+    box-shadow: 2px 4px 2px;
+    transform: translateY(-2px);
+
+}
+.embeded-form {
+    height: 80%;
+    width: 100%;
+    border-width: 0px;
 }
 .about-us {
     width: 75%;
