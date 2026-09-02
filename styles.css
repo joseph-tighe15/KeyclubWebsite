@@ -43,6 +43,21 @@ body {
         transition: 500ms;
     }
 }
+.footer-svg-linkie {
+    display: inline-block;
+    svg {
+        fill: var(--fixed-light);
+        width: 24px;
+        transition: 500ms;
+    }
+}
+.footer-svg-linkie:hover {
+    svg {
+        fill: var(--accent-color-1);
+    }
+    color: gray;
+    cursor: pointer;
+}
 .twitterLinkie {
     transform: translateY(-4px);
 }
