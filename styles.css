@@ -12,7 +12,7 @@
     position: fixed;
     width: 100%;
     height: 100%;
-    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRlgbFd61v6xwwOlpCMhIOQ4r3Ez5tPiSCoyonfmL3Vcg&s");
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcReElMTXd_EGsQIzy6mopaJsIzZLN7-BZzaqJTywAMJkw&s=10");
     background-repeat: no-repeat;
     background-size: cover;
     z-index: -1;
@@ -28,6 +28,7 @@
 .header h1 {
     justify-self: center;
     color: var(--fixed-light);
+    margin-bottom: 0;
 }
 body {
     margin: 0;
@@ -35,15 +36,19 @@ body {
     font-family: arial;
 }
 .small-linkie {
-    display: block;
+    display: inline-block;
     color: var(--fixed-dark);
     svg {
-        width: 16px;
+        width: 24px;
         transform: translateY(3px);
+        transition: 500ms;
     }
 }
 .small-linkie:hover {
-    color: #000000aa;
+    svg {
+        fill: var(--accent-color-1);
+    }
+    color: gray;
     cursor: pointer;
 }
 .nav-bar {
@@ -85,7 +90,13 @@ body {
     background-color: var(--main-color-light);
 }
 .text-content {
-    padding: 16px;
+    padding: 16px 64px 16px 64px;
+}
+.text-content h2 {
+    margin-left: -16px;
+}
+.text-content p {
+    font-size: 16px;
 }
 .footer {
     background-color: var(--main-color-dark);
@@ -106,4 +117,26 @@ body {
 .darkmode {
     cursor: pointer;
     float:right;
+}
+.photos-1 {
+    margin: 8px;
+}
+.about-us {
+    width: 75%;
+    float: center;
+}
+.about-us div {
+    display: flex;
+    flex-direction: row;
+}
+.about-us div div {
+    display: block;
+}
+.about-us-container {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+html {
+    scroll-behavior: smooth;
 }
