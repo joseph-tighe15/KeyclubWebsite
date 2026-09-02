@@ -27,7 +27,7 @@
 }
 .header h1 {
     justify-self: center;
-    color: var(--fixed-light);
+    color: var(--fixed-dark);
     margin-bottom: 0;
 }
 body {
@@ -90,6 +90,13 @@ body {
         background-color: var(--accent-color-1); /* Custom underline color */
     }
 }
+.nav-bar a .image {
+    display: inline-block;
+    white-space: pre-wrap;
+    background-image: url("/assets/logo.png");
+    background-size: 16px;
+    background-repeat: no-repeat;
+}
 .content {
     color: var(--text-color-light);
     background-color: var(--main-color-light);
@@ -115,6 +122,9 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+.left-footer img {
+    width: 22.5%;
 }
 .right-footer {
     padding: 10px;
