@@ -12,7 +12,7 @@
     position: fixed;
     width: 100%;
     height: 100%;
-    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcReElMTXd_EGsQIzy6mopaJsIzZLN7-BZzaqJTywAMJkw&s=10");
+    background-image: linear-gradient(blue, yellow);
     background-repeat: no-repeat;
     background-size: cover;
     z-index: -1;
@@ -40,9 +40,14 @@ body {
     color: var(--fixed-dark);
     svg {
         width: 24px;
-        transform: translateY(3px);
         transition: 500ms;
     }
+}
+.twitterLinkie {
+    transform: translateY(-4px);
+}
+.bs {
+    transform: translateY(3px);
 }
 .small-linkie:hover {
     svg {
@@ -120,6 +125,8 @@ body {
 }
 .photos-1 {
     margin: 8px;
+    border-radius: 16px;
+    box-shadow: 2px 2px 2px;
 }
 .about-us {
     width: 75%;
