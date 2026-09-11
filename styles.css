@@ -7,6 +7,24 @@
     --fixed-dark: #000000;
     --fixed-light: #ffffff;
 }
+body::before {
+    content: " ";
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKJ890cJP2yM_4KC-2gZqeUx5lWPCm1BhHKzDuZjM0jA&s=10");
+    background-repeat: repeat;
+    background-size: auto;
+    filter: opacity(5%);
+    z-index: 2;
+    background-size:
+        100% 2px,
+        3px 100%;
+    pointer-events: none;
+}
 .header .header-image {
     top: 0;
     position: fixed;
@@ -129,7 +147,7 @@ body {
     background-color: var(--main-color-dark);
     color: var(--text-color-dark);
     display: flex;
-    flex-direction: column;
+    flex-direction: column-reverse;
     align-items: center;
 }
 .left-footer {
